@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  app-belajar-cicd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    container_name: container-belajar-cicd
+    networks:
+      - app-network
+    ports:
+      - "3000:3000"
+
+networks:
+  app-network:
+    driver: bridge
