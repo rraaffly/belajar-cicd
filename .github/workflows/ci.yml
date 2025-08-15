@@ -18,12 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Bun.sh
+      - name: Install bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.2.20
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: bun install --frozen-lockfile
 
   build:
@@ -33,3 +33,11 @@ jobs:
     steps:
       - name: Run Build
         run: echo "anjeng"
+
+  test:
+    name: testing
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run test
+        run: echo "anjeng test"
