@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "bun run  --watch ./src/main.ts",
     "build": "rm -rf ./dist && bun build --compile --minify ./src/main.ts --outfile ./dist/main",
+    "test": "bun test",
     "start": "./dist/main"
   },
   "devDependencies": {
