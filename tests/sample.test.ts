@@ -1,7 +1,9 @@
+import { penjumlahan } from "$/lib/arithmetic";
 import { expect, test } from "bun:test";
 
 test("Penjumlahan", () => {
-  expect(2 + 9).toBe(11);
+  const result = penjumlahan(2, 2);
+  expect(result).toBe(4);
 });
 
 test("Pengurangan", () => {
