@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Build
-        run: echo "anjeng"
+        run: bun run build
 
   test:
     name: testing
@@ -40,4 +40,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run test
-        run: echo "anjeng test"
+        run: bun run test
