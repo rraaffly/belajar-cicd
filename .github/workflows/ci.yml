@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   pullreq:
-    name: anjing
+    name: Checking
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
