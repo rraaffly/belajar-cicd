@@ -11,11 +11,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  pullreq:
-    name: Checking
+  preparation:
+    name: Preparation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Bun.sh
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.2.20
+
+      - name: Install Dependencies
+        uses: bun install --frozen-lockfile
