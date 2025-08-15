@@ -25,3 +25,11 @@ jobs:
 
       - name: Install Dependencies
         run: bun install --frozen-lockfile
+
+  build:
+    name: Build
+    needs: [preparation]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Build
+        run: echo "anjeng"
