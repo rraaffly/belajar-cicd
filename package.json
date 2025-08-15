@@ -6,14 +6,14 @@
   "scripts": {
     "dev": "bun run  --watch ./src/main.ts",
     "build": "rm -rf ./dist && bun build --compile --minify ./src/main.ts --outfile ./dist/main",
-    "test": "bun test",
+    "test": "bun test --coverage",
     "start": "./dist/main"
+  },
+  "dependencies": {
+    "hono": "^4.9.1"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5"
-  },
-  "dependencies": {
-    "hono": "^4.9.1"
   }
 }
